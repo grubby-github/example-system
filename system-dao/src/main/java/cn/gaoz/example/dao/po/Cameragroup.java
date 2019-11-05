@@ -1,10 +1,7 @@
 package cn.gaoz.example.dao.po;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.Date;
+import javax.persistence.*;
 
 @Table(name = "`cameragroup`")
 public class Cameragroup {
