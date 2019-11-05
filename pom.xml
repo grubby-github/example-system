@@ -10,20 +10,20 @@
     </parent>
 
     <groupId>cn.gaoz.example</groupId>
-    <artifactId>cms-base</artifactId>
+    <artifactId>system-parent</artifactId>
     <version>1.0.0</version>
     <!--pom:父类型都为pom类型;jar:内部调用或者是作服务使用;war:需要部署的项目-->
     <packaging>pom</packaging>
-    <name>cms-base</name>
-    <description>ICare CMS Base Project</description>
+    <name>system-parent</name>
+    <description>Example System Project</description>
 
     <!--包含子模块-->
     <modules>
-        <module>base-common</module>
-        <module>base-dao</module>
-        <module>base-model</module>
-        <module>base-service</module>
-        <module>base-web</module>
+        <module>system-common</module>
+        <module>system-dao</module>
+        <module>system-model</module>
+        <module>system-service</module>
+        <module>system-web</module>
     </modules>
 
     <properties>

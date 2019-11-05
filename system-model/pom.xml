@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.gaoz.example</groupId>
+        <artifactId>system-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>cn.gaoz.example</groupId>
+    <artifactId>system-model</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>system-model</name>
+    <description>Example System Model Project</description>
+
+    <dependencies>
+        <!-- 自身项目 -->
+        <dependency>
+            <groupId>cn.gaoz.example</groupId>
+            <artifactId>system-dao</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- 使用@Validated注解对数据进行校验 -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
