@@ -6,5 +6,5 @@ import tk.mybatis.mapper.common.Mapper;
 
 @Repository
 public interface CameraMapper extends Mapper<Camera> {
-    int updateIsOnLine (int isOnline);
+    int updateIsOnLine(int isOnline);
 }

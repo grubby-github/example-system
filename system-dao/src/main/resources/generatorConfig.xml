@@ -44,30 +44,6 @@
                              targetProject="src/main/java"/>
 
         <!-- 生成表开始 -->
-        <table tableName="adddevice" domainObjectName="AddDevice" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
-               enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="alarmnonvehi" domainObjectName="AlarmNonvehi" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
-               enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="alarmped" domainObjectName="AlarmPed" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
-               enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="alarmvehi" domainObjectName="AlarmVehi" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
-               enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
         <table tableName="camera" domainObjectName="Camera" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
                enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
@@ -77,27 +53,6 @@
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
                enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="device" domainObjectName="Device" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
-               enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="platform" domainObjectName="Platform" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false"
-               enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="service" domainObjectName="Service" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
-               enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
-            <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
-        </table>
-        <table tableName="task" domainObjectName="Task" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
-               enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
             <generatedKey column="Id" sqlStatement="JDBC" identity="true"/>
         </table>
         <!-- 生成表结束 -->
