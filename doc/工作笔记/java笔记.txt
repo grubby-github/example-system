@@ -1,0 +1,67 @@
+﻿1.mvn命令：
+创建项目:
+mvn archetype:generate -DgroupId=com.icare.cms.access -DartifactId=lnpcms-access -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.icare.cms.access -DartifactId=lnpcms-access -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+打包:
+mvn clean package -Dmaven.test.skip=true
+在使用mvn package进行编译、打包时，Maven会执行src/test/java中的JUnit测试用例，有时为了跳过测试，会使用参数-DskipTests和-Dmaven.test.skip=true，这两个参数的主要区别是：
+-DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。
+-Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类。
+
+2.idea常用快捷键：
+Ctrl+alt+o	去除多余import
+Ctrl+alt+l	格式化代码
+Ctrl+alt+t	快速输入try catch等
+Ctrl+alt+b	快速定位到实现类
+Ctrl+shift+f	全项目查找,如果是win10需要在键盘设置里面去除这个冲突的快捷键
+shift双击	全项目查找指定类或方法
+alt+F7		快速查找某个类或方法的所有引用
+Ctrl+F8		切换断点
+只增加一对set和get方法时，使用alt+enter更快，而增加多对set和get方法时，使用alt+insert更快。
+
+3.字符串格式化：
+System.out.println(String.format("大家好，我叫：%s，今年：%d岁。%s是%s的爸爸。", "小明", 25, "小明", "小小明"));
+System.out.println(String.format("大家好，我叫：%1$s，今年：%2$d岁。%1$s是%3$s的爸爸。", "小明", 25, "小小明"));
+
+4.常用的HTTP动词有下面五个
+GET（SELECT） ：从服务器取出资源（一项或多项）。
+POST（CREATE）：在服务器新建一个资源。
+PUT（UPDATE） ：在服务器更新资源（客户端提供改变后的完整资源）。
+PATCH（UPDATE） ：在服务器更新资源（客户端提供改变的属性）。
+DELETE（DELETE）：从服务器删除资源。
+
+5.RESTFUL URL命名原则
+方法 	URL 			功能
+GET 	/users 			获取用户列表
+GET 	/users/1 		获取 id 为 1 的用户
+POST 	/users 			创建一个用户
+PUT 	/users/1 		替换 id 为 1 的用户
+PATCH 	/users/1 		修改 id 为 1 的用户
+DELETE 	/users/1 		删除 id 为 1 的用户
+GET 	/users/1/products 	获取 Id 为 1 用户下的产品列表
+GET 	/users/1/products/2 	获取 Id 为 1 用户下 Id 为 2 的产品
+POST 	/users/1/products 	在 Id 为 1 用户下，创建一个产品
+PUT 	/users/1/products/2 	在 Id 为 1 用户下，替换 Id 为 2 的产品
+PATCH 	/users/1/products/2 	修改 Id 为 1 的用户下 Id 为 2 的产品
+DELETE 	/users/1/products/2 	删除 Id 为 1 的用户下 Id 为 2 的产品
+
+6.关于java中很多人用get()和set()方法，而不用public的一点总结：
+get和set对于单个属性的赋值限制和多个属性之间关联赋值的情况是非常实用和方便
+
+7.各层命名规范用例：
+web层：XXX + Controller（createOne, updateOne, deleteOne, deleteBatch, findOne, findBatch, findAll）
+service层：XXX+Service;XXX+ServiceImpl（createOne, updateOne, deleteOne, deleteBatch, findOne, findBatch, findAll）
+dao层：ORM自动生成
+
+8.快捷键 	功能描述
+  F8 		单步调试,不进入函数内部
+  F7 		单步调试，进入函数内部
+  Shift+F7 	选择要进入的函数
+  Shift+F8 	跳出函数
+  Alt+F9 	运行到断点
+  Alt+F8 	执行表达式查看结果
+  F9 		继续执行，进入下一个断点或执行完程序
+  Ctrl+F8 	设置/取消当前行断点
+  Ctrl+Shift+F8 查看断点
+
+9.最好用“/”因为java是跨平台的。“\”（在java代码里应该是\\）是windows环境下的路径分隔符，Linux和Unix下都是用“/”。而在windows下也能识别“/”。所以最好用“/”

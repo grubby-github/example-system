@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "4081a5a9-61b4-4b5e-8698-2ccb0eca72e7",
+		"name": "example-root",
+		"description": "com.gaoz.example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rest",
+			"item": [
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup/28",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup/28",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup",
+								"28"
+							]
+						},
+						"description": "按id主键查找usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup?name=测试",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup?name=测试",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "测试"
+								}
+							]
+						},
+						"description": "按名称相似查找usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup/all",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup",
+								"all"
+							]
+						},
+						"description": "获取所有usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 1,\n        \"parentId\": 3,\n        \"name\": \"测试3\"\n}"
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup"
+							]
+						},
+						"description": "新增usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 28,\n        \"parentId\": 31,\n        \"name\": \"测试31\"\n}"
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup"
+							]
+						},
+						"description": "修改usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup/28",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup/28",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup",
+								"28"
+							]
+						},
+						"description": "按id主键删除usergroup"
+					},
+					"response": []
+				},
+				{
+					"name": "http://172.16.16.176:8080/rest/usergroup?ids=29,30,31,32",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://172.16.16.176:8080/rest/usergroup?ids=29,30,31,32",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"16",
+								"176"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"usergroup"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "29,30,31,32"
+								}
+							]
+						},
+						"description": "按多个id主键删除usergroup"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,53 @@
+1.ls命令:
+ls -l				除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来
+ls -lt				按时间正序排序显示文件详细信息
+ls -ltr				按时间反序排序显示文件详细信息
+ls -lS				按大小显示文件详细信息
+ls -lSr				按大小反序显示文件详细信息
+
+2.cd命令:
+cd /				进入要目录
+cd [dirName]			切换当前目录至dirName
+cd ..
+
+3.pwd命令:
+pwd				查看当前路径
+
+4.mkdir命令:
+mkdir t				当前工作目录下创建名为t的文件夹
+mkdir -p tmp/test/t1/t		在tmp目录下创建路径为test/t1/t的目录，若不存在，则创建。如果是/tmp就直接会把tmp目录创建在根目录下
+
+5.rm命令:
+
+6.rmdir命令:
+rmdir -p tmp/test/t1/t		当parent子目录被删除后使它也成为空目录的话，则顺便一并删除
+
+7.tail命令:
+ping 127.0.0.1 > ping.log &	后台运行：可使用jobs -l查看，也可使用fg将其移到前台运行
+tail -f ping.log		用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。
+
+8.ps命令：ps(process status)，用来查看当前运行的进程状态，一次性查看，如果需要动态连续结果使用top
+
+9.kill命令：
+kill -9				强制结束进程
+===========================================================================
+常用：
+clear				清屏
+ll				最方便查看文件
+df				查看磁盘信息
+cat /proc/version		查看内核版本
+rm cata*.*			删除所有cata开头的文件
+rm * -f				删除所有文件
+jps -v |grep tomcat
+ps -ef |grep vcn
+sh startup.sh
+tail -f |grep 实时查找内容
+date				查看系统时间
+which nginx			查看
+./kafka-consumer-groups.sh --bootstrap-server 3.109.0.247:9092,3.109.0.250:9092,3.109.0.251:9092 --group zhsq_group_in_pk --describe
+
+操作环境变量
+vi etc/profile
+shift+i进行编辑
+shift+:之后输入wq回车保存
+source etc/profile
