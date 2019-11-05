@@ -29,7 +29,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket createRestfulApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("CMS-Base")
+                .groupName("Example-System")
                 .pathMapping("/")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("cn.gaoz.example.controller")) //暴露接口地址的包路径
@@ -46,13 +46,13 @@ public class SwaggerConfiguration {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("CMS-Base RESTful API")
+                .title("Example-System RESTful API")
                 //创建人
                 .contact(new Contact("gaoz", "http://www.icarevision.cn/", "re_grubby@hotmail.com"))
                 //版本号
                 .version("1.0")
                 //描述
-                .description("CMS-Base只管理公司现有的PAS和VAS等所有的AS服务模块")
+                .description("Example-System RESTful API 服务模块")
                 .build();
     }
 }
