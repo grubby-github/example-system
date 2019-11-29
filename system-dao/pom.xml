@@ -21,7 +21,7 @@
         <generator.targetPackageMapper>cn.gaoz.example.dao.mapper</generator.targetPackageMapper>
         <generator.targetPackageMap>mappers</generator.targetPackageMap>
         <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
-        <jdbc.url>jdbc:mysql://192.168.1.172:3306/cms_base_db</jdbc.url>
+        <jdbc.url>jdbc:mysql://192.168.1.172:3306/ms_as_db</jdbc.url>
         <jdbc.userId>root</jdbc.userId>
         <jdbc.password>123456</jdbc.password>
     </properties>

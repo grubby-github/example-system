@@ -2,7 +2,9 @@ package cn.gaoz.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -15,9 +17,14 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @ServletComponentScan
 @EnableScheduling
-public class BaseWebApplication {
+public class BaseWebApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(BaseWebApplication.class, args);
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(BaseWebApplication.class);
     }
 }

@@ -10,12 +10,12 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- 导出 cms_base_db 的数据库结构
-CREATE DATABASE IF NOT EXISTS `cms_base_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `cms_base_db`;
+-- 导出 ms_as_db 的数据库结构
+CREATE DATABASE IF NOT EXISTS `ms_as_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ms_as_db`;
 
 
--- 导出  表 cms_base_db.adddevice 结构
+-- 导出  表 ms_as_db.adddevice 结构
 CREATE TABLE IF NOT EXISTS `adddevice` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ServiceId` int(11) NOT NULL DEFAULT '0' COMMENT '服务表主键',
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `adddevice` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.alarmnonvehi 结构
+-- 导出  表 ms_as_db.alarmnonvehi 结构
 CREATE TABLE IF NOT EXISTS `alarmnonvehi` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ResourceId` varchar(500) DEFAULT NULL COMMENT '资源Id',
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `alarmnonvehi` (
   `OriginImgUrl` varchar(500) DEFAULT NULL COMMENT '原图地址',
   `FeaDataLen` int(11) DEFAULT '0' COMMENT '特征内存长度',
   `FeaLen` int(11) DEFAULT '0' COMMENT '特征长度',
-  `Features` varchar(5000) DEFAULT '0' COMMENT '特征',
+  `Features` mediumtext COMMENT '特征',
   `FrameIndex` int(11) DEFAULT '0' COMMENT '目标帧位置',
   `LocationXLeft` int(11) DEFAULT '0' COMMENT '目标坐标点',
   `LocationXRight` int(11) DEFAULT '0' COMMENT '目标坐标点',
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `alarmnonvehi` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.alarmped 结构
+-- 导出  表 ms_as_db.alarmped 结构
 CREATE TABLE IF NOT EXISTS `alarmped` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ResourceId` varchar(500) DEFAULT NULL COMMENT '资源Id',
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `alarmped` (
   `OriginImgUrl` varchar(500) DEFAULT NULL COMMENT '原图地址',
   `FeaDataLen` int(11) DEFAULT '0' COMMENT '特征内存长度',
   `FeaLen` int(11) DEFAULT '0' COMMENT '特征长度',
-  `Features` varchar(5000) DEFAULT '0' COMMENT '特征',
+  `Features` mediumtext COMMENT '特征',
   `FrameIndex` int(11) DEFAULT '0' COMMENT '目标帧位置',
   `LocationXLeft` int(11) DEFAULT '0' COMMENT '目标坐标点',
   `LocationXRight` int(11) DEFAULT '0' COMMENT '目标坐标点',
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `alarmped` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.alarmvehi 结构
+-- 导出  表 ms_as_db.alarmvehi 结构
 CREATE TABLE IF NOT EXISTS `alarmvehi` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ResourceId` varchar(500) DEFAULT NULL COMMENT '资源Id',
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `alarmvehi` (
   `OriginImgUrl` varchar(500) DEFAULT NULL COMMENT '原图地址',
   `FeaDataLen` int(11) DEFAULT '0' COMMENT '特征内存长度',
   `FeaLen` int(11) DEFAULT '0' COMMENT '特征长度',
-  `Features` varchar(5000) DEFAULT '0' COMMENT '特征',
+  `Features` mediumtext COMMENT '特征',
   `FrameIndex` int(11) DEFAULT '0' COMMENT '目标帧位置',
   `LocationXLeft` int(11) DEFAULT '0' COMMENT '目标坐标点',
   `LocationXRight` int(11) DEFAULT '0' COMMENT '目标坐标点',
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `alarmvehi` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.camera 结构
+-- 导出  表 ms_as_db.camera 结构
 CREATE TABLE IF NOT EXISTS `camera` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `DevId` int(11) NOT NULL DEFAULT '0' COMMENT '设备表主键',
@@ -163,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `camera` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.cameragroup 结构
+-- 导出  表 ms_as_db.cameragroup 结构
 CREATE TABLE IF NOT EXISTS `cameragroup` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `PlatformId` int(11) DEFAULT '0' COMMENT '平台Id,没有平台时为0',
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `cameragroup` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.device 结构
+-- 导出  表 ms_as_db.device 结构
 CREATE TABLE IF NOT EXISTS `device` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ServiceId` int(11) NOT NULL DEFAULT '0' COMMENT '服务表主键',
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `device` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.platform 结构
+-- 导出  表 ms_as_db.platform 结构
 CREATE TABLE IF NOT EXISTS `platform` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ServiceId` int(11) NOT NULL DEFAULT '0' COMMENT '服务表主键',
@@ -234,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `platform` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.service 结构
+-- 导出  表 ms_as_db.service 结构
 CREATE TABLE IF NOT EXISTS `service` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `ServiceId` varchar(255) DEFAULT NULL COMMENT '服务上报Id',
@@ -253,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `service` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 cms_base_db.task 结构
+-- 导出  表 ms_as_db.task 结构
 CREATE TABLE IF NOT EXISTS `task` (
   `Id` int(4) NOT NULL AUTO_INCREMENT,
   `ServiceId` int(11) NOT NULL DEFAULT '0' COMMENT '服务表主键',
@@ -268,7 +268,6 @@ CREATE TABLE IF NOT EXISTS `task` (
   `ResourceName` varchar(255) DEFAULT NULL COMMENT '资源名称(镜头名或者离线视频名)',
   `AlgRule` varchar(8000) DEFAULT NULL COMMENT '分析规则参数（Json字符串）',
   `Progress` double DEFAULT NULL COMMENT '分析进度(只有离线视频才有分析进度)',
-  `IsDelete` smallint(6) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除 1删除）',
   `CreateTime` datetime DEFAULT NULL COMMENT '创建时间',
   `UpdateTime` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`Id`)
