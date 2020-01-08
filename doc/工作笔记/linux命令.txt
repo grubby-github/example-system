@@ -104,3 +104,6 @@ zq 不保存退出
 
 使配置文件立即生效
 source /etc/profile
+
+修改权限
+chmod 777 文件名
