@@ -1,0 +1,67 @@
+Ubuntu启用root账户 ：
+1）输入命令：sudo vim /etc/ssh/sshd_config，找到PermitRootLogin without-password 修改为PermitRootLogin yes，并去除#号。
+2）再执行：service ssh restart
+3）修改root密码：sudo passwd root【一般root密码设置为123456】
+===================================================================================
+Ubuntu安装docker详细步骤:
+1.$ sudo apt-get remove docker docker-engine docker.io containerd runc
+
+2.$ sudo apt-get update
+
+3.$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+4.$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+5.$ sudo apt-key fingerprint 0EBFCD88
+   
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+
+6.$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
+
+7.$ sudo apt-get update
+
+8.$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+9. $ sudo docker run hello-world
+===================================================================================
+Docke 镜像加速:
+对于使用 systemd 的系统，请在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）：
+{"registry-mirrors":["https://registry.docker-cn.com"]}
+
+之后重新启动服务：
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+
+检查加速器是否生效
+
+检查加速器是否生效配置加速器之后，如果拉取镜像仍然十分缓慢，请手动检查加速器配置是否生效，在命令行执行 docker info，如果从结果中看到了如下内容，说明配置成功。
+
+$ docker info
+Registry Mirrors:
+    https://registry.docker-cn.com/
+===================================================================================
+Docker 镜像使用:
+1.docker images
+显示本地主机上的镜像
+
+2.docker pull 仓库源:镜像标签
+下载镜像
+
+3.docker search 关键词
+搜索镜像
+
+4.docker rmi 关键词
+删除镜像
+
+5.
